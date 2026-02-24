@@ -69,9 +69,22 @@ a:hover::after {
 
 .btn {
   display: inline-block;
+  background-color: #0d1b2a;
+  color: #ffffff;
   border: 1px solid #0d1b2a;
-  padding: 8px 20px;
-  margin-top: 16px;
+  padding: 8px 24px;
+  margin-bottom: 32px;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn::after {
+  color: #ffffff;
 }
 
 footer {
@@ -125,10 +138,14 @@ td a {
   margin-top: 24px;
 }
 
+.section h2 {
+  margin-top: 0;
+}
+
 .tabs {
   display: flex;
   gap: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .tab {
