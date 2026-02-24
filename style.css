@@ -189,3 +189,39 @@ td a {
 .home-list li {
   border-bottom: 1px solid #c8d4e0;
 }
+
+/* Album Page Styles */
+.album-list {
+  margin-top: 48px;
+}
+
+.album-item {
+  margin-bottom: 64px;
+}
+
+.album-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #0d1b2a;
+}
+
+.album-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.album-links {
+  display: flex;
+  gap: 20px;
+}
+
+.album-links a {
+  display: inline-block;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
