@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Chicala Lpis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+
+<a href="index.html" class="back">Chicala Lpis</a>
+
+<h1>Contact</h1>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('ja')">JA</button>
+  <button class="tab" onclick="switchTab('en')">EN</button>
+</div>
+
+<div id="lang-ja" class="lang active">
+  <h2>楽曲利用について</h2>
+  <div class="section">
+    <h3>利用禁止</h3>
+    <ul>
+      <li>アルバム楽曲のフルアップロード</li>
+      <li>制作者を騙っての利用</li>
+    </ul>
+    <h3>事前連絡必須</h3>
+    <ul>
+      <li>金銭の発生するゲーム・イベント等での利用</li>
+      <li>アルバム楽曲の一部の利用</li>
+    </ul>
+    <h3>事前連絡不要</h3>
+    <ul>
+      <li>SoundCloud公開楽曲のBMS・K-Shoot MANIA等（非商業）での利用（再配布・譜面動画も可）</li>
+    </ul>
+    <p>楽曲利用時は必ず<strong>作曲者を明記</strong>してください。動画・ジャケット等は<strong>各制作者に許可</strong>を得てください。</p>
+    <p>Blackest Luxury CarはPeroPeroGames様と独占契約のため<strong>商用音楽ゲームでの利用不可</strong>。</p>
+  </div>
+
+  <h2>ご依頼について</h2>
+  <div class="section">
+    <p>現在有償・無償でのご依頼を受け付けております。ただし制作余裕のある場合に限るため、お断りする場合があります。</p>
+    <p>締切の2ヶ月以上前までにご連絡いただけると助かります。応募フォームまたはX(Twitter)のDMからお気軽にご相談ください。</p>
+  </div>
+</div>
+
+<div id="lang-en" class="lang">
+  <h2>About using my musics</h2>
+  <div class="section">
+    <h3>Prohibited</h3>
+    <ul>
+      <li>Uploading full album songs.</li>
+      <li>Using songs under a false producer name.</li>
+    </ul>
+    <h3>Contact me before using</h3>
+    <ul>
+      <li>Commercial use in games, events, etc.</li>
+      <li>Using parts of album songs.</li>
+    </ul>
+    <h3>No need to contact</h3>
+    <ul>
+      <li>Non-commercial use (BMS, K-Shoot MANIA, etc.) of SoundCloud songs. Redistribution and chart videos are OK.</li>
+    </ul>
+    <p><strong>Credit the composer</strong> when using my songs. For visuals/jackets, <strong>contact each producer</strong>.</p>
+    <p>Blackest Luxury Car has an exclusive agreement with PeroPeroGames — <strong>commercial music game use not permitted</strong>.</p>
+  </div>
+
+  <h2>About requests</h2>
+  <div class="section">
+    <p>I accept both paid and free requests, though I may decline if I lack enough time.</p>
+    <p>Please contact me at least two months before the deadline. Feel free to reach out via the contact form or X (Twitter) DM.</p>
+  </div>
+</div>
+
+<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdrVRQr-uv_Yb59xPIhQVjglfkid64hvHiMJERKWTpbCYrJTQ/viewform">Contact Form</a>
+
+<footer>© Chicala Lpis All rights reserved.</footer>
+
+<script>
+  function switchTab(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelector('.tab[onclick="switchTab(\'' + lang + '\')"]').classList.add('active');
+  }
+</script>
+
+</body>
+</html>

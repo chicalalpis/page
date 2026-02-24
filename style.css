@@ -1,0 +1,174 @@
+/* Global Styles */
+body {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", Georgia, serif;
+  line-height: 2;
+  color: #0d1b2a;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 0 0 48px;
+}
+
+h2 {
+  font-size: 0.85rem;
+  margin: 32px 0 8px;
+  color: #4a5a6e;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #2a3a4e;
+}
+
+p + p {
+  margin-top: 8px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 0.9rem;
+  color: #2a3a4e;
+}
+
+a {
+  color: #0d1b2a;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+}
+
+a::after {
+  content: "↗";
+  font-size: 0.65em;
+  color: #c8d4e0;
+  vertical-align: super;
+  margin-left: 3px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:hover::after {
+  color: #4a5a6e;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #0d1b2a;
+  padding: 8px 20px;
+  margin-top: 16px;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.75rem;
+  color: #4a5a6e;
+}
+
+/* Table Styles (index.html) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 0;
+  border-bottom: 1px solid #c8d4e0;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+th {
+  color: #4a5a6e;
+  font-size: 0.85rem;
+}
+
+td:first-child {
+  font-weight: 400;
+  width: 60%;
+}
+
+td a {
+  display: inline;
+  padding: 0;
+}
+
+/* Contact Styles (contact.html) */
+.back::after {
+  content: none;
+}
+
+.back::before {
+  content: "←";
+  margin-right: 4px;
+}
+
+.section {
+  border-top: 1px solid #c8d4e0;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #4a5a6e;
+  cursor: pointer;
+  padding: 0 0 4px;
+}
+
+.tab::after {
+  content: none;
+}
+
+.tab.active {
+  color: #0d1b2a;
+  border-bottom-color: #0d1b2a;
+}
+
+.lang {
+  display: none;
+}
+
+.lang.active {
+  display: block;
+}
+
+/* Custom adjustments */
+.contact-page h1 {
+  margin: 32px 0 32px;
+}
+
+.contact-page ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+
+.home-list li {
+  border-bottom: 1px solid #c8d4e0;
+}
