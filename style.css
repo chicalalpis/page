@@ -148,7 +148,7 @@ td a {
 .tabs {
   display: flex;
   gap: 24px;
-  margin-bottom: 24px;
+  margin-top: 24px;
 }
 
 .tab {
