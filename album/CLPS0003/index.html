@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vuota/vuoto — Chicala Lpis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    :root {
+      --accent-color: #555;
+    }
+    .special-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: var(--accent-color);
+      font-size: 0.9rem;
+    }
+    .album-header {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 600px) {
+      .album-header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    .album-jacket img {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .title-area {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: 0.05em;
+    }
+    .catchphrase {
+      font-size: 1.1rem;
+      color: #666;
+      display: block;
+    }
+    .description {
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .album-meta {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 2rem;
+      padding-top: 0.5rem;
+    }
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    .meta-table th {
+      text-align: left;
+      font-weight: 400;
+      color: #999;
+      padding: 0.3rem 1rem 0.3rem 0;
+      width: 100px;
+    }
+    .meta-table td {
+      padding: 0.3rem 0;
+    }
+    .buy-section h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .buy-links {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .buy-links a {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+    }
+    .buy-links a:hover {
+      background: #f5f5f5;
+      border-color: #999;
+    }
+    .tracklist {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .tracklist h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      min-width: 200px;
+    }
+    .tracklist ol {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+    .tracklist li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f9f9f9;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tracklist li span {
+      color: #999;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      margin-bottom: 3rem;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .buy-links a {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+    }
+    .buy-links a:hover {
+      background: #f5f5f5;
+      border-color: #999;
+    }
+    .credit {
+      font-size: 0.85rem;
+      color: #888;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .credit h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      min-width: 200px;
+      color: #333;
+    }
+    .credit-table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: auto;
+    }
+    .credit-table th {
+      text-align: right;
+      font-weight: 400;
+      padding: 0.2rem 1rem 0.2rem 0;
+      color: #999;
+      width: 100px;
+    }
+    .credit-table td {
+      text-align: left;
+      padding: 0.2rem 0;
+      min-width: 120px;
+    }
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body class="special-page">
+
+<a href="../" class="back">← Back to Album List</a>
+
+<main>
+  <div class="title-area">
+    <h1>vuota/vuoto</h1>
+    <span class="catchphrase">躍動！哀愁！アコーディオン！</span>
+  </div>
+
+  <div class="album-header">
+    <div class="album-jacket">
+      <img src="../images/vuota_vuoto.webp" alt="vuota/vuoto jacket">
+    </div>
+    <div class="album-info">
+      <p class="description">アコーディオン主体の楽曲を集めたオリジナルファンタジーCDです。腕によりをかけて作りました。</p>
+      
+      <div class="album-meta">
+        <table class="meta-table">
+          <tr><th>Release</th><td>2022.04.24</td></tr>
+          <tr><th>Price</th><td>¥500 / $4.90</td></tr>
+        </table>
+      </div>
+
+      <div class="buy-section">
+        <h2>Buy Link</h2>
+        <div class="buy-links">
+          <a href="https://c-lpis.booth.pm/items/3790388" target="_blank">BOOTH</a>
+          <a href="https://c-lpis.bandcamp.com/album/vuota-vuoto" target="_blank">Bandcamp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="tracklist">
+    <h2>Tracklist</h2>
+    <ol>
+      <li><span>01</span> 躍動するヴォタ・ヴォト</li>
+      <li><span>02</span> 孤独のリキリキ</li>
+      <li><span>03</span> 衰亡へのヴィトーリエット</li>
+      <li><span>04</span> 追憶のコンプレータ</li>
+      <li><span>05</span> 終曲</li>
+    </ol>
+  </section>
+
+  <section class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ktI4PEUKisU?si=W9tsYLlaQiEKg78h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+
+  <section class="credit">
+    <h2>Credit</h2>
+    <table class="credit-table">
+      <tr><th>Music</th><td>Chicala Lpis</td></tr>
+      <tr><th>Jacket</th><td>Alt</td></tr>
+    </table>
+  </section>
+</main>
+
+<footer>
+  © Chicala Lpis All rights reserved.
+</footer>
+
+</body>
+</html>
