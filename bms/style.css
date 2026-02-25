@@ -1,0 +1,32 @@
+.bms-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 48px;
+  margin-top: 48px;
+}
+
+.bms-item h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #0d1b2a;
+}
+
+.bms-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bms-item a {
+  display: inline-block;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .bms-list {
+    grid-template-columns: 1fr;
+  }
+}

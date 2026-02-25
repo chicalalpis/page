@@ -67,6 +67,13 @@ a:hover::after {
   color: #4a5a6e;
 }
 
+footer {
+  margin-top: 60px;
+  font-size: 0.75rem;
+  color: #4a5a6e;
+}
+
+/* Common Components */
 .btn {
   display: inline-block;
   background-color: #0d1b2a;
@@ -87,13 +94,22 @@ a:hover::after {
   color: #ffffff;
 }
 
-footer {
-  margin-top: 60px;
-  font-size: 0.75rem;
-  color: #4a5a6e;
+/* Back Link (Common for subpages) */
+.back::after {
+  content: none;
 }
 
-/* Table Styles (index.html) */
+.back::before {
+  content: "←";
+  margin-right: 4px;
+}
+
+/* Home List */
+.home-list li {
+  border-bottom: 1px solid #c8d4e0;
+}
+
+/* Table Style */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -112,26 +128,12 @@ th {
   font-size: 0.85rem;
 }
 
-td:first-child {
-  font-weight: 400;
-  width: 60%;
-}
-
 td a {
   display: inline;
   padding: 0;
 }
 
-/* Contact Styles (contact.html) */
-.back::after {
-  content: none;
-}
-
-.back::before {
-  content: "←";
-  margin-right: 4px;
-}
-
+/* Section Style */
 .section {
   border-top: 1px solid #c8d4e0;
   padding-top: 24px;
@@ -142,6 +144,7 @@ td a {
   margin-top: 0;
 }
 
+/* Tab Component */
 .tabs {
   display: flex;
   gap: 24px;
@@ -168,6 +171,7 @@ td a {
   border-bottom-color: #0d1b2a;
 }
 
+/* Language Switcher */
 .lang {
   display: none;
 }
@@ -175,89 +179,3 @@ td a {
 .lang.active {
   display: block;
 }
-
-/* Custom adjustments */
-.contact-page h1 {
-  margin: 32px 0 32px;
-}
-
-.contact-page ul {
-  list-style: disc;
-  padding-left: 1.2em;
-}
-
-.home-list li {
-  border-bottom: 1px solid #c8d4e0;
-}
-
-/* Album Page Styles */
-.album-list {
-  margin-top: 48px;
-}
-
-.album-item {
-  margin-bottom: 64px;
-}
-
-.album-item h3 {
-  font-size: 1.1rem;
-  margin-bottom: 16px;
-  color: #0d1b2a;
-}
-
-.album-item img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  display: block;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.album-links {
-  display: flex;
-  gap: 20px;
-}
-
-.album-links a {
-  display: inline-block;
-  padding: 0;
-  font-size: 0.9rem;
-}
-
-/* BMS Page Styles */
-.bms-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 48px;
-  margin-top: 48px;
-}
-
-
-.bms-item h3 {
-  font-size: 1rem;
-  margin-bottom: 12px;
-  color: #0d1b2a;
-}
-
-.bms-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.bms-item a {
-  display: inline-block;
-  padding: 0;
-  font-size: 0.85rem;
-}
-
-@media (max-width: 480px) {
-  .bms-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-
