@@ -51,7 +51,7 @@ a {
   padding: 8px 0;
 }
 
-a::after {
+a[href^="http"]::after {
   content: "↗";
   font-size: 0.65em;
   color: #c8d4e0;
@@ -63,7 +63,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:hover::after {
+a[href^="http"]:hover::after {
   color: #4a5a6e;
 }
 
@@ -90,7 +90,7 @@ footer {
   color: #ffffff;
 }
 
-.btn::after {
+.btn[href^="http"]::after {
   color: #ffffff;
 }
 
